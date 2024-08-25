@@ -45,7 +45,7 @@ class Member {
         return $this->name;
     }
 
-    public function borrowBook(Book $book) {
+    public function borrowBook($book) {
 
         if ($book->borrowBook()) {
 
@@ -55,7 +55,7 @@ class Member {
 
     }
 
-    public function returnBook(Book $book) {
+    public function returnBook($book) {
         $book->returnBook();
         echo $this->name . " returned '" . $book->getTitle() . "'.\n";
     }
